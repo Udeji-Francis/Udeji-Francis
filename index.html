@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Currency Converter</title>
+  <!--
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  -->
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/normalise.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header id="header">
+  <div class="container">
+    <div id="header-inner">
+
+      <div id="header-brand">
+        <h1 id="header-title">Currency Converter</h1>
+      </div>
+
+      <div id="header-misc">
+        <form id="search-form">
+          <input type="search" id="search" placeholder="Type to Search Countries" autocomplete="false">
+        </form>
+      </div>
+
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <div class="container">
+    <div id="main-dashboard">
+
+      <h2 id="dashboard-headline">
+        <span id="from" class="hl">-</span> <span id="from-country-text">United State Dollar</span> equals <span id="to"   class="hl">-</span> <span id="to-country-text">Nigerian Naira</span>
+      </h2>
+
+      <div id="dashboard-input-group">
+
+        <div class="input-group">
+          <input class="input-convert" type="number" id="from-currency" min="1" max="9" step="1" value="1">
+          <select class="select-country" id="from-country">
+            <!--
+            <option value="USD" class="country">United States Dollar</option>
+            <option value="USD" class="country">United States Dollar</option>
+            <option value="USD" class="country">United States Dollar</option>
+            -->
+          </select>
+        </div>
+
+        <div class="input-group">
+          <input class="input-convert" type="number" id="to-currency" min="1" max="9" step="1" value="1">
+          <select class="select-country" id="to-country">
+            <!--
+            <option value="NGN" class="country">Nigerian Naira</option>
+            <option value="NGN" class="country">Nigerian Naira</option>
+            <option value="NGN" class="country">Nigerian Naira</option>
+            -->
+          </select>
+        </div>
+
+      </div>
+
+    </div><!-- end main dashboard -->
+
+
+      <div class="nav">
+        <ul id="navigation">
+
+          <li data-targetlink="countries-list" class="nav-item fa fa-home active">
+              <span data-targetlink="countries-list">All</span>
+          </li>
+          <li data-targetlink="favorites-list" class="nav-item fa fa-star">
+            <span data-targetlink="favorites-list">Favorites</span>
+          </li>
+          <li data-targetlink="more-list" class="nav-item fa fa-info-circle">
+            <span data-targetlink="more-list">More</span>
+          </li>
+
+        </ul>
+      </div>
+
+
+    <div id="submain-dashboard">
+      <ul class="list countries-list">
+        <!--
+        <li class="countries-list-item">
+          <div class="country-favorite">
+            <button class="btn-favorite"></button>
+          </div>
+          <div class="country-info">
+            <span class="country-flag">
+              <img height="50" width="50" src="img/preview.png" id="country-flag">
+            </span>
+            <div class="country-name">
+              <h3 class="country-shortname">NGN</h3>
+              <h5 class="country-currency">Nigerian Naira</h5>
+            </div>
+          </div>
+          <div class="currency-value">
+            <span class="currency-symbol">N</span>
+            <span class="currency-rate">370.00</span>
+          </div>
+        </li>
+
+      -->
+      </ul>
+      <div class="list favorites-list hidden">
+        <ul class="countries-fav-list">
+
+        </ul>
+      </div>
+      <div class="list more-list hidden">more</div>
+    </div><!-- end submain dashboard -->
+
+  </div>
+</main>
+<script src="js/database.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>
